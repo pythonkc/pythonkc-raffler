@@ -1,0 +1,1 @@
+-e git://github.com/pythonkc/pythonkc-meetups.git#egg=pythonkc-meetups
