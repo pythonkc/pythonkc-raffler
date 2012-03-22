@@ -7,8 +7,8 @@ from optparse import OptionParser
 def raffle_time(api_key=None, event_id=None):
     client = PythonKCMeetups(api_key=api_key)
     attendees = client.get_event_attendees(event_id)
-    attendee_names = [rsvp.name for rsvp in attendees]
-    print random.choice(attendee_names)
+    winner = random.choice(attendees)
+    print "And the winner is, %s" % winner.name
 
 if __name__ == '__main__':
     parser = OptionParser()
