@@ -8,6 +8,7 @@ from optparse import OptionParser
 def raffle_time(api_key=None, event_id=None):
     client = PythonKCMeetups(api_key=api_key)
     attendees = client.get_event_attendees(event_id)
+    random.shuffle(attendees)
     winner = random.choice(attendees)
     if winner.photo:
         webbrowser.open_new(winner.photo.url)
