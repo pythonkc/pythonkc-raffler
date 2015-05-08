@@ -18,9 +18,8 @@ def raffle_time(api_key=None, event_id=None):
 
 if __name__ == '__main__':
     parser = OptionParser()
-    parser.add_option("-k", "--key", help="api key for meetup.com",
-                      dest="api_key", type="string")
-    parser.add_option("-e", "--event_id", help="event id from meetup.com",
-                      dest="event_id", type="int")
+    parser.add_option("-k", "--key", help="api key for meetup.com", dest="api_key", type="string")
+    parser.add_option("-e", "--event_id", help="event id from meetup.com", dest="event_id",
+                      type="int")
     options, args = parser.parse_args()
     raffle_time(api_key=options.api_key, event_id=options.event_id)
